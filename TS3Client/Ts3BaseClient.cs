@@ -183,6 +183,11 @@ namespace TS3Client
 			=> Send<ClientInfo>("clientinfo",
 			new CommandParameter("clid", clientId)).WrapSingle();
 
+		/// <summary>Displays detailed configuration information about a channel including name, topic, etc.</summary>
+		public R<ChannelInfo, CommandError> ChannelInfo(ChannelIdT channelId)
+			=> Send<ChannelInfo>("channelinfo",
+			new CommandParameter("cid", channelId)).WrapSingle();
+
 		/// <summary>Use a token key and gain access to a server or channel group.
 		/// Please note that the server will automatically delete the token after it has been used.</summary>
 		public CmdR PrivilegeKeyUse(string key)
