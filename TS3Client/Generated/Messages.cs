@@ -1447,7 +1447,6 @@ namespace TS3Client.Messages
 
 		public void SetField(string name, ReadOnlySpan<byte> value)
 		{
-			Console.WriteLine(name);
 			switch (name)
 			{
 				//case "pid"
